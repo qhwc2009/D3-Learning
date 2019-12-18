@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Link, Redirect } from 'react-ro
 import { Layout, Menu } from 'antd';
 
 import Home from 'view/Home/Home';
+import BarChartPage from 'view/BarChartPage/BarChartPage'
 import css from './App.module.scss';
 
 const { Header, Footer, Sider, Content } = Layout;
@@ -28,12 +29,20 @@ export default function App() {
                     home
                   </Link>
                 </Menu.Item>
+                <Menu.Item key="2">
+                  <Link className="nav-text" to="/bar">
+                    bar chart
+                  </Link>
+                </Menu.Item>
               </Menu>
             </Sider>
             <Content>
               <Switch>
                 <Route path="/home">
                   <Home />
+                </Route>
+                <Route path="/bar">
+                  <BarChartPage />
                 </Route>
                 <Route exact path="/">
                   <Redirect to="/home" />
