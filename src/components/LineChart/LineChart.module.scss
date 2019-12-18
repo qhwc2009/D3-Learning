@@ -1,11 +1,11 @@
-.barchart {
+.linechart {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 :global {
-  .bar-chart-axisText {
+  .line-chart-axisText {
     font-size: 15px;
   }
 }

@@ -1,24 +1,23 @@
 import React, { useMemo, useState, useEffect } from 'react';
 import * as d3 from 'd3';
+import dayjs from 'dayjs';
 
-import BarChart from 'components/BarChart/BarChart';
-import css from './BarChartPage.module.scss';
+import LineChart from 'components/LineChart/LineChart';
+import css from './LineChartPage.module.scss';
 
-function BarChartPage() {
+function LineChartPage() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
     const readCSV = async () => {
       try {
-        const readData = await d3.csv(process.env.PUBLIC_URL + './data.csv', function(d) {
+        const readData = await d3.csv(process.env.PUBLIC_URL + './aapl.csv', function(d) {
           return {
-            date: d.date,
-            money: +d.money,
+            date: dayjs(d.date, 'MMM D, YYYY').format('YYYY-MM-DD'),
+            value: +d.val,
           };
         });
-        // eslint-disable-next-line
-        console.log('readData: ', readData)
-        setData(readData);
+        setData(readData.filter(d => !Number.isNaN(d.value)));
       } catch (e) {
         // eslint-disable-next-line
         console.log('e: ', e);
@@ -30,13 +29,12 @@ function BarChartPage() {
   const config = useMemo(
     () => ({
       data,
-      title: '条形图',
+      title: '线形图',
       margins: { top: 80, left: 80, bottom: 50, right: 80 },
       barPadding: 0.15,
-      barColor: '#096dd9',
+      lineColor: '#096dd9',
       textColor: 'black',
       gridColor: 'gray',
-      tickShowGrid: [60, 120, 180],
       hoverColor: '#40a9ff',
       animateDuration: 1000,
     }),
@@ -44,10 +42,10 @@ function BarChartPage() {
   );
 
   return (
-    <div className={css.barChartPage}>
-      <BarChart config={config} />
+    <div className={css.lineChartPage}>
+      <LineChart config={config} />
     </div>
   );
 }
 
-export default BarChartPage;
+export default LineChartPage;

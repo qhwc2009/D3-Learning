@@ -5,6 +5,7 @@ import { Layout, Menu } from 'antd';
 
 import Home from 'view/Home/Home';
 import BarChartPage from 'view/BarChartPage/BarChartPage'
+import LineChartPage from 'view/LineChartPage/LineChartPage'
 import css from './App.module.scss';
 
 const { Header, Footer, Sider, Content } = Layout;
@@ -34,6 +35,11 @@ export default function App() {
                     bar chart
                   </Link>
                 </Menu.Item>
+                <Menu.Item key="3">
+                  <Link className="nav-text" to="/line">
+                    line chart
+                  </Link>
+                </Menu.Item>
               </Menu>
             </Sider>
             <Content>
@@ -43,6 +49,9 @@ export default function App() {
                 </Route>
                 <Route path="/bar">
                   <BarChartPage />
+                </Route>
+                <Route path="/line">
+                  <LineChartPage />
                 </Route>
                 <Route exact path="/">
                   <Redirect to="/home" />
