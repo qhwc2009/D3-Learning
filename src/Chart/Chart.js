@@ -97,7 +97,7 @@ export default class Chart {
     if (!this._body) {
       this._body = this._svg
         .append('g')
-        .attr('class', 'bar-chart-body')
+        .attr('class', 'chart-body')
         .attr('transform', 'translate(' + this.bodyX() + ',' + this.bodyY() + ')')
         .attr('clip-path', 'url(#clip)');
     }

@@ -1,0 +1,14 @@
+.piechart {
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+:global {
+  .pie-chart-axisText {
+    font-size: 15px;
+  }
+}

@@ -6,6 +6,7 @@ import { Layout, Menu } from 'antd';
 import Home from 'view/Home/Home';
 import BarChartPage from 'view/BarChartPage/BarChartPage'
 import LineChartPage from 'view/LineChartPage/LineChartPage'
+import PieChartPage from 'view/PieChartPage/PieChartPage'
 import css from './App.module.scss';
 
 const { Header, Footer, Sider, Content } = Layout;
@@ -40,6 +41,11 @@ export default function App() {
                     line chart
                   </Link>
                 </Menu.Item>
+                <Menu.Item key="4">
+                  <Link className="nav-text" to="/pie">
+                    pie chart
+                  </Link>
+                </Menu.Item>
               </Menu>
             </Sider>
             <Content>
@@ -52,6 +58,9 @@ export default function App() {
                 </Route>
                 <Route path="/line">
                   <LineChartPage />
+                </Route>
+                <Route path="/pie">
+                  <PieChartPage />
                 </Route>
                 <Route exact path="/">
                   <Redirect to="/home" />

@@ -29,19 +29,19 @@ function LineChart({ config, className = '' }) {
     const x = d3
       .scaleUtc()
       .domain(d3.extent(data, d => parseDate(d.date)))
-      .range([config.margins.left, chart.width() - config.margins.right]);
+      .range([0, chart.getBodyWidth()]);
 
     // y
     const y = d3
       .scaleLinear()
       .domain([0, d3.max(data, d => d.value)])
       .nice()
-      .range([chart.height() - config.margins.bottom, config.margins.top]);
+      .range([chart.getBodyHeight(), 0]);
 
     // line
     const line = d3
       .line()
-      .defined(d => !Number.isNaN(d.value))
+      .defined(d => !Number.isNaN(+d.value))
       .x(d => {
         return x(parseDate(d.date));
       })
@@ -53,7 +53,7 @@ function LineChart({ config, className = '' }) {
     const xAxis = g =>
       g
         .attr('class', 'line-chart-xaxis')
-        .attr('transform', `translate(0, ${chart.height() - config.margins.bottom})`)
+        .attr('transform', `translate(${chart.bodyX()}, ${chart.bodyY() + chart.getBodyHeight()})`)
         .call(
           d3
             .axisBottom(x)
@@ -65,7 +65,7 @@ function LineChart({ config, className = '' }) {
     const yAxis = g =>
       g
         .attr('class', 'line-chart-yaxis')
-        .attr('transform', `translate(${config.margins.left}, 0)`)
+        .attr('transform', `translate(${chart.bodyX()}, ${chart.bodyY()})`)
         .call(d3.axisLeft(y))
         // .call(g => g.select('.domain').remove())
         .call(g =>
@@ -109,7 +109,7 @@ function LineChart({ config, className = '' }) {
         .select('.line-chart-line')
         .remove();
       chart
-        .svg()
+        .body()
         .append('path')
         .attr('class', 'line-chart-line-defined')
         .datum(data.filter(line.defined()))
@@ -117,7 +117,7 @@ function LineChart({ config, className = '' }) {
         .attr('fill', 'none')
         .attr('d', line);
       chart
-        .svg()
+        .body()
         .append('path')
         .attr('class', 'line-chart-line')
         .datum(data)

@@ -66,7 +66,7 @@ function BarChart({ config, className = '' }) {
       // d3.select(`#${chartId.current} .bar-chart-xaxis`).remove();
       chart
         .svg()
-        .insert('g', '.bar-chart-body')
+        .insert('g', '.chart-body')
         .attr('transform', `translate(${chart.bodyX()}, ${chart.bodyY() + chart.getBodyHeight()})`)
         .attr('class', 'bar-chart-xaxis')
         .call(d3.axisBottom(chart.scaleX()));
@@ -77,7 +77,7 @@ function BarChart({ config, className = '' }) {
       // d3.select(`#${chartId.current} .bar-chart-yaxis`).remove();
       chart
         .svg()
-        .insert('g', '.bar-chart-body')
+        .insert('g', '.chart-body')
         .attr('transform', `translate(${chart.bodyX()}, ${chart.bodyY()})`)
         .attr('class', 'bar-chart-yaxis')
         .call(d3.axisLeft(chart.scaleY()));

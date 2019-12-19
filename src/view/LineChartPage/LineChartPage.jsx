@@ -17,7 +17,14 @@ function LineChartPage() {
             value: +d.val,
           };
         });
-        setData(readData.filter(d => !Number.isNaN(d.value)));
+        setData(
+          readData
+            .filter(d => !Number.isNaN(d.value))
+            .map(d => ({
+              ...d,
+              value: dayjs(d.date, 'YYYY-MM-DD').month() < 3 ? undefined : d.value,
+            })),
+        );
       } catch (e) {
         // eslint-disable-next-line
         console.log('e: ', e);
