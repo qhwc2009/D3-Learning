@@ -17,4 +17,8 @@ function uuid() {
   return 'id-' + s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
 }
 
-export { compose, uuid };
+function getRandomColor16() {
+  return '#' + (Math.floor(Math.random() * 0xFFFFFF)).toString(16);
+}
+
+export { compose, uuid, getRandomColor16 };

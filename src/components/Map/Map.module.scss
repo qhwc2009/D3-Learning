@@ -1,0 +1,15 @@
+.map {
+  width: 1000px;
+  height: 800px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+:global {
+  .map-chart-map {
+    font-size: 15px;
+  }
+  
+}
