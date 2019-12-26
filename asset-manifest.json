@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/d3-learn/static/css/main.d748e695.chunk.css",
-    "main.js": "/d3-learn/static/js/main.5cecb084.chunk.js",
-    "main.js.map": "/d3-learn/static/js/main.5cecb084.chunk.js.map",
-    "runtime-main.js": "/d3-learn/static/js/runtime-main.f0690e53.js",
-    "runtime-main.js.map": "/d3-learn/static/js/runtime-main.f0690e53.js.map",
-    "static/css/2.b72b26a5.chunk.css": "/d3-learn/static/css/2.b72b26a5.chunk.css",
-    "static/js/2.89783a4a.chunk.js": "/d3-learn/static/js/2.89783a4a.chunk.js",
-    "static/js/2.89783a4a.chunk.js.map": "/d3-learn/static/js/2.89783a4a.chunk.js.map",
-    "index.html": "/d3-learn/index.html",
-    "precache-manifest.96ec389fd79d9e79ad29cae7015dc90e.js": "/d3-learn/precache-manifest.96ec389fd79d9e79ad29cae7015dc90e.js",
-    "service-worker.js": "/d3-learn/service-worker.js",
-    "static/css/2.b72b26a5.chunk.css.map": "/d3-learn/static/css/2.b72b26a5.chunk.css.map",
-    "static/css/main.d748e695.chunk.css.map": "/d3-learn/static/css/main.d748e695.chunk.css.map",
-    "static/js/2.89783a4a.chunk.js.LICENSE": "/d3-learn/static/js/2.89783a4a.chunk.js.LICENSE"
+    "main.css": "/D3-Learning/static/css/main.d748e695.chunk.css",
+    "main.js": "/D3-Learning/static/js/main.93e466a6.chunk.js",
+    "main.js.map": "/D3-Learning/static/js/main.93e466a6.chunk.js.map",
+    "runtime-main.js": "/D3-Learning/static/js/runtime-main.2f89279b.js",
+    "runtime-main.js.map": "/D3-Learning/static/js/runtime-main.2f89279b.js.map",
+    "static/css/2.b72b26a5.chunk.css": "/D3-Learning/static/css/2.b72b26a5.chunk.css",
+    "static/js/2.7d7a84d4.chunk.js": "/D3-Learning/static/js/2.7d7a84d4.chunk.js",
+    "static/js/2.7d7a84d4.chunk.js.map": "/D3-Learning/static/js/2.7d7a84d4.chunk.js.map",
+    "index.html": "/D3-Learning/index.html",
+    "precache-manifest.256e7f0d39c08c7ca9e71512c346da04.js": "/D3-Learning/precache-manifest.256e7f0d39c08c7ca9e71512c346da04.js",
+    "service-worker.js": "/D3-Learning/service-worker.js",
+    "static/css/2.b72b26a5.chunk.css.map": "/D3-Learning/static/css/2.b72b26a5.chunk.css.map",
+    "static/css/main.d748e695.chunk.css.map": "/D3-Learning/static/css/main.d748e695.chunk.css.map",
+    "static/js/2.7d7a84d4.chunk.js.LICENSE": "/D3-Learning/static/js/2.7d7a84d4.chunk.js.LICENSE"
   },
   "entrypoints": [
-    "static/js/runtime-main.f0690e53.js",
+    "static/js/runtime-main.2f89279b.js",
     "static/css/2.b72b26a5.chunk.css",
-    "static/js/2.89783a4a.chunk.js",
+    "static/js/2.7d7a84d4.chunk.js",
     "static/css/main.d748e695.chunk.css",
-    "static/js/main.5cecb084.chunk.js"
+    "static/js/main.93e466a6.chunk.js"
   ]
 }
