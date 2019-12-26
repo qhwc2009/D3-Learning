@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/d3-learn/static/css/main.d748e695.chunk.css",
+    "main.js": "/d3-learn/static/js/main.5cecb084.chunk.js",
+    "main.js.map": "/d3-learn/static/js/main.5cecb084.chunk.js.map",
+    "runtime-main.js": "/d3-learn/static/js/runtime-main.f0690e53.js",
+    "runtime-main.js.map": "/d3-learn/static/js/runtime-main.f0690e53.js.map",
+    "static/css/2.b72b26a5.chunk.css": "/d3-learn/static/css/2.b72b26a5.chunk.css",
+    "static/js/2.89783a4a.chunk.js": "/d3-learn/static/js/2.89783a4a.chunk.js",
+    "static/js/2.89783a4a.chunk.js.map": "/d3-learn/static/js/2.89783a4a.chunk.js.map",
+    "index.html": "/d3-learn/index.html",
+    "precache-manifest.96ec389fd79d9e79ad29cae7015dc90e.js": "/d3-learn/precache-manifest.96ec389fd79d9e79ad29cae7015dc90e.js",
+    "service-worker.js": "/d3-learn/service-worker.js",
+    "static/css/2.b72b26a5.chunk.css.map": "/d3-learn/static/css/2.b72b26a5.chunk.css.map",
+    "static/css/main.d748e695.chunk.css.map": "/d3-learn/static/css/main.d748e695.chunk.css.map",
+    "static/js/2.89783a4a.chunk.js.LICENSE": "/d3-learn/static/js/2.89783a4a.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f0690e53.js",
+    "static/css/2.b72b26a5.chunk.css",
+    "static/js/2.89783a4a.chunk.js",
+    "static/css/main.d748e695.chunk.css",
+    "static/js/main.5cecb084.chunk.js"
+  ]
+}
