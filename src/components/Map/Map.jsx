@@ -6,7 +6,7 @@ import _ from 'lodash';
 import * as geo from 'd3-geo';
 import * as d3Color from 'd3-scale-chromatic';
 
-import { uuid, getRandomColor16 } from 'utils/utils';
+import { uuid } from 'utils/utils';
 import Chart from 'Chart/Chart';
 import css from './Map.module.scss';
 
@@ -67,7 +67,9 @@ function Map({ config, className = '' }) {
         .attr('d', path)
         .attr('fill', (d, i) => colors(i))
         .attr('stroke', 'lightGray')
-        .attr('stroke-width', 1);
+        .attr('stroke-width', 1)
+        .append('title')
+        .attr('')
     };
 
     // 渲染城市

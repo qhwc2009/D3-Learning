@@ -1,0 +1,14 @@
+.svgTree {
+  width: 1000px;
+  height: 1500px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+:global {
+  .svg-tree {
+    font-size: 15px;
+  }
+}

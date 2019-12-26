@@ -8,6 +8,7 @@ import BarChartPage from 'view/BarChartPage/BarChartPage';
 import LineChartPage from 'view/LineChartPage/LineChartPage';
 import PieChartPage from 'view/PieChartPage/PieChartPage';
 import ChinaMapPage from 'view/ChinaMapPage/ChinaMapPage';
+import SVGTreePage from 'view/SVGTreePage/SVGTreePage';
 import css from './App.module.scss';
 
 const { Header, Footer, Sider, Content } = Layout;
@@ -50,6 +51,11 @@ export default function App() {
                     map chart
                   </Link>
                 </Menu.Item>
+                <Menu.Item key="svgTree">
+                  <Link className="nav-text" to="/svg-tree">
+                    svg tree
+                  </Link>
+                </Menu.Item>
               </Menu>
             </Sider>
             <Content>
@@ -68,6 +74,9 @@ export default function App() {
                 </Route>
                 <Route path="/map">
                   <ChinaMapPage />
+                </Route>
+                <Route path="/svg-tree">
+                  <SVGTreePage />
                 </Route>
                 <Route exact path="/">
                   <Redirect to="/home" />

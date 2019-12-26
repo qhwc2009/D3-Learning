@@ -101,26 +101,35 @@ export default class Chart {
         .attr('transform', 'translate(' + this.bodyX() + ',' + this.bodyY() + ')')
         .attr('clip-path', 'url(#clip)');
     }
-
-    this.render();
   }
-  renderChart() {
+
+  renderBox() {
     if (!this._box) {
       this._box = d3
         .select('body')
         .append('div')
         .attr('class', 'bar-chart-box');
     }
+  }
 
+  renderSVG() {
     if (!this._svg) {
       this._svg = this._box
         .append('svg')
         .attr('width', this._width)
         .attr('height', this._height);
     }
+  }
+
+  renderChart() {
+    this.renderBox();
+
+    this.renderSVG();
 
     this.defineBodyClip();
 
     this.renderBody();
+
+    this.render();
   }
 }
