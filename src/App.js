@@ -15,7 +15,7 @@ const { Header, Footer, Sider, Content } = Layout;
 
 export default function App() {
   return (
-    <Router basename="/d3-learn">
+    <Router basename="/D3-Learning">
       <div className={css.app}>
         <Layout className={css.container}>
           <Header>

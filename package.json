@@ -2,7 +2,7 @@
   "name": "d3-learning",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://qhwc2009.github.io/d3-learn",
+  "homepage": "https://qhwc2009.github.io/D3-Learning",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
