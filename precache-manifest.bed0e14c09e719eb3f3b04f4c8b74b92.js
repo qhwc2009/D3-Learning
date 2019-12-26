@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "96c1f57213ac55fdc644f44bf9823047",
+    "revision": "fad4da2185bfdb70448a1d5875e2890e",
     "url": "/D3-Learning/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/D3-Learning/static/css/2.b72b26a5.chunk.css"
   },
   {
-    "revision": "7b3827a41203ca4abbbe",
+    "revision": "f2cfdf94ad695b2cee9a",
     "url": "/D3-Learning/static/css/main.d748e695.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/D3-Learning/static/js/2.7d7a84d4.chunk.js.LICENSE"
   },
   {
-    "revision": "7b3827a41203ca4abbbe",
-    "url": "/D3-Learning/static/js/main.93e466a6.chunk.js"
+    "revision": "f2cfdf94ad695b2cee9a",
+    "url": "/D3-Learning/static/js/main.249b825a.chunk.js"
   },
   {
     "revision": "c036b9659f2485abc12e",
