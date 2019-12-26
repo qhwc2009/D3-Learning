@@ -10,7 +10,7 @@ function SVGTreePage() {
   useEffect(() => {
     const readJson = async () => {
       try {
-        const treeJson = await d3.json(process.env.PUBLIC_URL + './flare-2.json');
+        const treeJson = await d3.json(process.env.PUBLIC_URL + '/flare-2.json');
         setData(treeJson);
       } catch (e) {
         // eslint-disable-next-line

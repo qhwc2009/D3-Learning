@@ -12,9 +12,9 @@ function ChinaMapPage() {
   useEffect(() => {
     const readCSV = async () => {
       try {
-        const mapJson = await d3.json(process.env.PUBLIC_URL + './china.json');
+        const mapJson = await d3.json(process.env.PUBLIC_URL + '/china.json');
         setMapData(mapJson);
-        const cityJson = await d3.json(process.env.PUBLIC_URL + './city.json');
+        const cityJson = await d3.json(process.env.PUBLIC_URL + '/city.json');
         setCityData(cityJson);
       } catch (e) {
         // eslint-disable-next-line

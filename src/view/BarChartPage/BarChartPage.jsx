@@ -10,7 +10,7 @@ function BarChartPage() {
   useEffect(() => {
     const readCSV = async () => {
       try {
-        const readData = await d3.csv(process.env.PUBLIC_URL + './data.csv', function(d) {
+        const readData = await d3.csv(process.env.PUBLIC_URL + '/data.csv', function(d) {
           return {
             date: d.date,
             money: +d.money,

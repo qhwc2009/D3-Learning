@@ -10,7 +10,7 @@ function PieChartPage() {
   useEffect(() => {
     const readCSV = async () => {
       try {
-        const readData = await d3.csv(process.env.PUBLIC_URL + './population-by-age.csv');
+        const readData = await d3.csv(process.env.PUBLIC_URL + '/population-by-age.csv');
         setData(readData);
       } catch (e) {
         // eslint-disable-next-line
