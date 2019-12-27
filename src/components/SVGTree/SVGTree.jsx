@@ -73,25 +73,29 @@ function SVGTree({ config, className = '' }) {
     };
     // 渲染树图
     chart.renderSVGTree = function() {
+      chart.body().select('.link').remove();
       const gLink = chart
         .body()
         .append('g')
+        .attr('class', 'link')
         .attr('fill', 'none')
         .attr('stroke', '#555')
         .attr('stroke-opacity', 0.4)
         .attr('stroke-width', 1.5);
 
+      chart.body().select('.node').remove();
       const gNode = chart
         .body()
         .append('g')
+        .attr('class', 'node')
         .attr('cursor', 'pointer')
         .attr('pointer-events', 'all');
 
       function update(source) {
         const duration = d3.event && d3.event.altKey ? 2500 : 250;
+        // 拿到所有的1节点
         const nodes = root.descendants().reverse();
-        // eslint-disable-next-line
-        console.log('nodes: ', nodes)
+        // 拿到所有的线
         const links = root.links();
 
         // 计算新tree布局
@@ -124,6 +128,7 @@ function SVGTree({ config, className = '' }) {
         const nodeEnter = node
           .enter()
           .append('g')
+          .attr('class', 'node-node')
           .attr('transform', d => `translate(${source.y0}, ${source.x0})`)
           .attr('fill-opacity', 0)
           .attr('stroke-opacity', 0)
@@ -134,6 +139,7 @@ function SVGTree({ config, className = '' }) {
 
         nodeEnter
           .append('circle')
+          .attr('class', 'node-circle')
           .attr('r', 2.5)
           .attr('fill', d => (d._children ? '#555' : '#999'))
           .attr('stroke-width', 10);
@@ -179,6 +185,7 @@ function SVGTree({ config, className = '' }) {
         const linkEnter = link
           .enter()
           .append('path')
+          .attr('class', 'link-path')
           .attr('d', d => {
             const o = { x: source.x0, y: source.y0 };
             return diagonal({ source: o, target: o });
