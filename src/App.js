@@ -9,6 +9,7 @@ import LineChartPage from 'view/LineChartPage/LineChartPage';
 import PieChartPage from 'view/PieChartPage/PieChartPage';
 import ChinaMapPage from 'view/ChinaMapPage/ChinaMapPage';
 import SVGTreePage from 'view/SVGTreePage/SVGTreePage';
+import CanvasTreePage from 'view/CanvasTreePage/CanvasTreePage';
 import css from './App.module.scss';
 
 const { Header, Footer, Sider, Content } = Layout;
@@ -24,7 +25,7 @@ export default function App() {
             </Menu>
           </Header>
           <Layout className={css.body}>
-            <Sider>
+            <Sider className={css.sider}>
               <Menu className={css.sideBarMenu} theme="light" mode="inline" defaultSelectedKeys={['home']}>
                 <Menu.Item key="home">
                   <Link className="nav-text" to="/home">
@@ -56,9 +57,14 @@ export default function App() {
                     svg tree
                   </Link>
                 </Menu.Item>
+                <Menu.Item key="canvasTree">
+                  <Link className="nav-text" to="/canvas-tree">
+                    canvas tree
+                  </Link>
+                </Menu.Item>
               </Menu>
             </Sider>
-            <Content>
+            <Content className={css.main}>
               <Switch>
                 <Route path="/home">
                   <Home />
@@ -77,6 +83,9 @@ export default function App() {
                 </Route>
                 <Route path="/svg-tree">
                   <SVGTreePage />
+                </Route>
+                <Route path="/canvas-tree">
+                  <CanvasTreePage />
                 </Route>
                 <Route exact path="/">
                   <Redirect to="/home" />

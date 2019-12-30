@@ -1,15 +1,25 @@
 .app {
   height: 100vh;
   width: 100vw;
+  box-sizing: border-box;
   .container {
     height: 100%;
   }
 }
 .body {
   height: calc(100% - 64px - 64px);
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
   .sideBarMenu {
     height: 100%;
     overflow: auto;
+  }
+  .sider {
+    flex: 0 0 200px;
+  }
+  .main {
+    flex: 1;
   }
 }
 .footer {
